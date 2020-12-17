@@ -24,6 +24,10 @@ const bookSchema = new mongoose.Schema({
       message: "{VALUE} is not an integer value",
     },
   },
+  Image: {
+    type: String,
+    require: true,
+  },
 });
 
 module.exports = mongoose.model("Book", bookSchema);

@@ -5,8 +5,13 @@ function bookService() {
     return Book.find({});
   }
 
-  async function addBook(title, author, isbn) {
-    return Book.create({ Title: title, Author: author, ISBN: isbn });
+  async function addBook(title, author, isbn, bookImage) {
+    return Book.create({
+      Title: title,
+      Author: author,
+      ISBN: isbn,
+      Image: bookImage,
+    });
   }
 
   async function deleteBook(isbn) {
